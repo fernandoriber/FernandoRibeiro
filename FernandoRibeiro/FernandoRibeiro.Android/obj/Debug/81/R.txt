@@ -1759,6 +1759,7 @@ int style Theme_MediaRouter 0x7f0e0003
 int style Theme_MediaRouter_Light 0x7f0e0004
 int style Theme_MediaRouter_Light_DarkControlPanel 0x7f0e0005
 int style Theme_MediaRouter_LightControlPanel 0x7f0e0006
+int style Theme_Splash 0x7f0e0192
 int style ThemeOverlay_AppCompat 0x7f0e0116
 int style ThemeOverlay_AppCompat_ActionBar 0x7f0e0117
 int style ThemeOverlay_AppCompat_Dark 0x7f0e0118

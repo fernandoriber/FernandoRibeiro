@@ -7614,6 +7614,9 @@ namespace FernandoRibeiro.Droid
 			// aapt resource value: 0x7f0e0006
 			public const int Theme_MediaRouter_LightControlPanel = 2131623942;
 			
+			// aapt resource value: 0x7f0e0192
+			public const int Theme_Splash = 2131624338;
+			
 			// aapt resource value: 0x7f0e0116
 			public const int ThemeOverlay_AppCompat = 2131624214;
 			

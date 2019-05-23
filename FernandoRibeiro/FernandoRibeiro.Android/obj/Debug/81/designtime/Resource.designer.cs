@@ -8872,6 +8872,9 @@ namespace FernandoRibeiro.Droid
 			// aapt resource value: 0x7F160121
 			public const int Theme_MediaRouter_Light_DarkControlPanel = 2132148513;
 			
+			// aapt resource value: 0x7F060005
+			public const int Theme_Splash = 2131099653;
+			
 			// aapt resource value: 0x1
 			public const int WalletFragmentDefaultButtonTextAppearance = 1;
 			

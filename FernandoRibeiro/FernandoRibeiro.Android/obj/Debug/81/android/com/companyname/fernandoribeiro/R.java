@@ -4450,6 +4450,7 @@ containing a value of this type.
         public static final int Theme_MediaRouter_Light=0x7f0e0004;
         public static final int Theme_MediaRouter_Light_DarkControlPanel=0x7f0e0005;
         public static final int Theme_MediaRouter_LightControlPanel=0x7f0e0006;
+        public static final int Theme_Splash=0x7f0e0192;
         public static final int ThemeOverlay_AppCompat=0x7f0e0116;
         public static final int ThemeOverlay_AppCompat_ActionBar=0x7f0e0117;
         public static final int ThemeOverlay_AppCompat_Dark=0x7f0e0118;
