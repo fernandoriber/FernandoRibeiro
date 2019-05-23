@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:FernandoRibeiro.Controls;assembly=FernandoRibeiro"
+    x:Class="FernandoRibeiro.Views.BemVindoPage">
+    <ScrollView>
+        <StackLayout
+            Orientation="Vertical"
+                Margin="20,20,20,20">
+            <Label                 
+                Text="Seja muito bem vindo ao meu app de apresentação!"
+                Style="{DynamicResource BrandNameStyle}"
+                HorizontalOptions="CenterAndExpand"
+                HorizontalTextAlignment="Center"
+                FontSize="Large"
+                FontAttributes="Bold"
+                TextColor="RoyalBlue"/>           
+            <local:SectionDivider Margin="0,20,0,5"></local:SectionDivider>
+            <StackLayout
+                Orientation="Horizontal"
+                HorizontalOptions="CenterAndExpand">
+                <Image
+                    Source="calendar.png"/>
+                <Label 
+                    Text="{Binding DayOfweek}" 
+                    FontSize="Small"
+                    TextColor="Gray"
+                    FontAttributes="Bold"/>
+                <Label 
+                    Text="{Binding TodayDate}" 
+                    FontSize="Small"
+                    TextColor="Gray"
+                    FontAttributes="Bold"/>
+            </StackLayout>
+            <local:SectionDivider Margin="0,5,0,20"></local:SectionDivider>
+            <StackLayout Orientation="Vertical">
+                <StackLayout Orientation="Horizontal">
+                    <Image
+                        Source="phone.png"/>
+                    <Label 
+                        Text="Dados do seu dispositivo:" 
+                        HorizontalOptions="StartAndExpand"
+                        HorizontalTextAlignment="Start"
+                        FontSize="Medium"
+                        TextDecorations="Underline"
+                        TextColor="Black"/>
+                </StackLayout>
+                <Grid 
+                    Margin="10,10,10,0"
+                    ColumnSpacing="0"
+                    RowSpacing="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <StackLayout
+                        Orientation="Horizontal"
+                        Grid.Row="0"
+                        Grid.Column="0">
+                        <Label
+                            Text="Modelo:"/>
+                        <Label
+                            Text="{Binding InfoModel.Model}"
+                            TextColor="Black"/>
+                    </StackLayout>
+                    <StackLayout
+                        Orientation="Horizontal"
+                        Grid.Row="1"
+                        Grid.Column="0">
+                        <Label
+                            Text="Marca:"/>
+                        <Label
+                            Text="{Binding InfoModel.Manufacturer}"
+                            TextColor="Black"/>
+                    </StackLayout>
+                    <StackLayout
+                        Orientation="Horizontal"
+                        Grid.Row="2"
+                        Grid.Column="0">
+                        <Label
+                            Text="Nome:"/>
+                        <Label
+                            Text="{Binding InfoModel.DeviceName}"
+                            TextColor="Black"/>
+                    </StackLayout>
+                    <StackLayout
+                        Orientation="Horizontal"
+                        Grid.Row="3"
+                        Grid.Column="0">
+                        <Label
+                            Text="Versão:"/>
+                        <Label
+                            Text="{Binding InfoModel.VersionString}"
+                            TextColor="Black"/>
+                    </StackLayout>
+                    <StackLayout
+                        Orientation="Horizontal"
+                        Grid.Row="4"
+                        Grid.Column="0">
+                        <Label
+                            Text="Plataforma:"/>
+                        <Label
+                            Text="{Binding InfoModel.Platform}"
+                            TextColor="Black"/>
+                    </StackLayout>
+                </Grid>
+            </StackLayout>
+            <local:SectionDivider Margin="0,10,0,20"></local:SectionDivider>
+            <StackLayout
+                Orientation="Vertical">
+                <StackLayout Orientation="Horizontal">
+                    <Button
+                        Style="{DynamicResource PrimaryActionButtonStyle}"                       
+                        Text="Obter localização"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="Center"
+                        Command="{Binding GetLocationCommand}"/>                   
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Image
+                        Source="marker.png"
+                        IsVisible="{Binding IsVisible}"/>
+                    <Label
+                        Text="{Binding Geolocation}"
+                        Margin="0,10,0,0"
+                        HorizontalOptions="CenterAndExpand"
+                        HorizontalTextAlignment="Center"
+                        FontAttributes="Bold"
+                        FontSize="Medium"
+                        TextColor="Gray"/>
+                </StackLayout>
+            </StackLayout>
+            <local:SectionDivider Margin="0,20,0,20"></local:SectionDivider>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
